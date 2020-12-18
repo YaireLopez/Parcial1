@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parcial 1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+    	.container
+    	{
+    		padding-right:30px;
+    		margin-left: 90px; 
+    		margin-right: 20px;
+    		margin-top: 150px; 
+    	}
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+
+    <div class="container">
+	<table class=" primary table table-bordered table-hover table-striped table-condensed">
+		<thead>
+		   	<tr class="success">
+		   		<th>Alimentos</th>
+		   		<th>Calorías(Kcal)</th>
+		   	    <th>Grasas(g)</th>
+		   	    <th>Proteína(g)</th>
+		   	    <th>Carbohidratos(g)</th>
+		   	    <th>ok</th>
+		   	    <th>Opciones</th>
+		   	</tr>
+		  </thead>
+
+		    <tr>
+		    	<td>Arándano</td>
+		    	<td>
+		    		<p id="CalA">49</p> 	
+			    	<input id="CalA2"type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="GrasA">0.2</p> 	
+			         <input id="GrasA2" type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="ProtA">0.4</p> 	
+			    	<input id="ProtA2" type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="CarbA">12.7</p> 	
+			    	<input id="CarbA2" type="number"  class="form-control" name="">
+			    	
+		        </td>
+			    	<td> 
+				    	<select name="select">
+						  <option value="bien">bien</option>
+						  <option value="mal">mal</option>
+	                    </select> 
+			    	</td>
+		    	<td> <button class="editar" onclick="mostrar($('#CalA2'), $('#CalA'), $('#GrasA2'),$('#GrasA'),$('#ProtA2'),$('#ProtA'),$('#CarbA2'),$('#CarbA'),$('.editar'),'.editar')">Editar</button></td>
+		    </tr>
+		    <tr class="warning">
+		    	<td>Plátano</td>
+		    	<td>
+		    		<p id="CalP">90</p> 	
+			    	<input id="CalP2"type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="GrasP">0.3</p> 	
+			         <input id="GrasP2" type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="ProtP">1.0</p> 	
+			    	<input id="ProtP2" type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="CarbP">23.5</p> 	
+			    	<input id="CarbP2" type="number"  class="form-control" name="">
+			    	
+		        </td>
+		    	<td> 
+				    	<select name="select">
+						  <option value="bien">bien</option>
+						  <option value="mal">mal</option>
+	                    </select> 
+			    </td>
+		    	<td> <button class="editar2" onclick="mostrar($('#CalP2'), $('#CalP'), $('#GrasP2'),$('#GrasP'),$('#ProtP2'),$('#ProtP'),$('#CarbP2'),$('#CarbP'),$('.editar2'),'.editar2')">Editar</button></td>
+		    </tr>
+		        
+		    <tr>
+		    	<td>Cereza</td>
+		    	<td>
+		    		<p id="CalC">46</p> 	
+			    	<input id="CalC2"type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="GrasC">0.4</p> 	
+			         <input id="GrasC2" type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="ProtC">0.9</p> 	
+			    	<input id="ProtC2" type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="CarbC">10.9</p> 	
+			    	<input id="CarbC2" type="number"  class="form-control" name="">
+			    	
+		        </td>
+		    	<td> 
+				    	<select id="state" name="select">
+						  <option id="bueno" value="bien">bien</option>
+						  <option id="malo" value="mal">mal</option>
+	                    </select>
+
+			    </td>
+		    	<td> <button class="editar3" onclick="mostrar($('#CalC2'), $('#CalC'), $('#GrasC2'),$('#GrasC'),$('#ProtC2'),$('#ProtC'),$('#CarbC2'),$('#CarbC'),$('.editar3'),'.editar3')">Editar</button></td>
+		    </tr>
+
+		    <tr class="warning">
+		    	<td>Fresa</td>
+		    	<td>
+		    		<p id="CalF">37</p> 	
+			    	<input id="CalF2"type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="GrasF">0.5</p> 	
+			         <input id="GrasF2" type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="ProtF">0.8</p> 	
+			    	<input id="ProtF2" type="number"  class="form-control" name="">
+		        </td>
+		    		<td>
+		    		<p id="CarbF">8.3</p> 	
+			    	<input id="CarbF2" type="number"  class="form-control" name="">
+			    	
+		        </td>
+		    	<td> 
+				    	<select name="select">
+						  <option value="bien">bien</option>
+						  <option value="mal">mal</option>
+	                    </select> 
+			    </td>
+		    	<td> <button class="editar4" onclick="mostrar($('#CalF2'), $('#CalF'), $('#GrasF2'),$('#GrasF'),$('#ProtF2'),$('#ProtF'),$('#CarbF2'),$('#CarbF'),$('.editar4'),'.editar4')">Editar</button></td>
+		    </tr>
+	</table>
+	
+			<p>Pulse Aceptar para guardar los cambios o cancelar para anularlos</p>
+			<a class="btn btn-primary" onclick="aceptar()" href="Secundary.html" role="button">Aceptar</a>
+			<button id="cancelar" onclick="cancelarAc()" type="button" class="btn btn-danger">Cancelar</button>
+   </div>
+   <script src="script.js"type="text/javascript"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
